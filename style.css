@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    display: flex;         
+    flex-direction: column; 
+    align-items: center;    
+    
+}
+
+.title {
+    font-size: 3rem;    
+    margin-top: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrera innehållet horisontellt */
+    position: relative;
+    margin-top: 20px;
+ }
+
+ .happy-face, .middle-face, .sad-face {
+    position: absolute;  /* Alla ansikten ligger på exakt samma plats */
+    top: 0;  /* Placera dem på toppen av wrappern */
+    left: 50%;  /* Centrerar dem horisontellt i wrappern */
+    transform: translateX(-50%);  /* Justerar så att de är exakt centrerade */
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.happy-face {
+    background-color: #fcba03;
+    
+   }
+
+   .happy-eyes{
+    width: 50px;
+    height: 80px;
+    background: black;
+    border-radius: 140px;
+    position: absolute;
+    top: 40px;
+    }
+
+        .left-eye {
+            left: 75px;
+
+        }
+        .right-eye {
+            right: 75px;
+        
+         }
+
+    .happy-mouth {
+        width: 200px;
+        height: 70px;
+        border-top: 0;
+        background: black;
+        border-radius: 0 0 100px 100px / 0 0 90px 90px;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
+
+.middle-face {
+    background-color: #fc9803;
+    display: none;
+
+    }
+
+    .middle-eyes {
+        width: 50px;
+        height: 80px;
+        background: black;
+        border-radius: 140px;
+        position: absolute;
+        top: 40px;
+      }
+        .left {
+            left: 75px;
+        }
+    
+        .right {
+            right: 75px;
+        }
+    .middle-mouth {
+        color: black;
+        position: absolute;
+        width: 200px;
+        height: 70px;
+        background: black;
+        border-radius: 100px 100px 0 0 / 100px 100px 0 0;
+        position: absolute;
+        bottom: 80px;
+        left: 50px;
+     }
+
+
+
+.sad-face {
+    background-color: #c74d2f;
+    
+    }
+    .sad-eyes{
+        width: 50px;
+        height: 80px;
+        background: black;
+        border-radius: 140px;
+        position: absolute;
+        top: 40px;
+    }
+
+    .lefty {
+        left: 75px;
+     }
+
+    .righty {
+        right: 75px;
+    }
+
+    .sad-mouth {
+        color: black;
+        position: absolute;
+        width: 200px;
+        height: 70px;
+        background: black;
+        border-radius: 100px 100px 0 0 / 100px 100px 0 0;
+        position: absolute;
+        bottom: 80px;
+        left: 50px;
+        }
+
+      
+
+    .tear1 {
+        border-top-left-radius: 70%; 
+        border-bottom-left-radius: 55%; 
+        border-bottom-right-radius: 70%; 
+        transform: rotate(-45deg); 
+        background-color: rgb(59, 148, 175);
+        width: 30px; 
+        height: 30px; 
+        margin-top: 80px;
+        margin-left: 30px; 
+        }
+
+    .tear2 {
+        border-top-left-radius: 70%; 
+        border-bottom-left-radius: 55%; 
+        border-bottom-right-radius: 70%; 
+        transform: rotate(-45deg); 
+        background-color: rgb(59, 148, 175);
+        width: 30px; 
+        height: 30px; 
+        margin-left: 30px; 
+        margin-top: 30px;
+        }
+
+    .mood-boxes {
+            position: absolute;
+            left: 40px;
+            top: 300px;
+            display: flex;         
+            flex-direction: column; 
+            
+        }
+        
+        .hunger-box, .joy-box, .energy-box {
+        display: flex;
+        background-color: white;
+        width: 300px;
+        height: 60px;
+        border: solid black;    
+        margin-top: 20px;
+        border-radius: 10%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        }
+        
+        .hunger-text, .joy-text, .energy-text {
+        
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        margin-top: 0px;
+        color: #fc6703;
+        
+        }
+        
+        button {
+        position: absolute;
+        height: 30px;
+        width: 80px;
+        border-radius: 10%;
+        background-color: green;
+        margin-left: 10px;
+        border: solid yellow;
+        }
+        
+        /* Specifik positionering av varje knapp till höger om boxarna */
+        .hunger-box button {
+            top: 10px;  /* Justera knappen till toppen av hunger-boxen */
+            left: 320px;  /* Justera knappen till höger om hunger-boxen */
+        }
+
+        .joy-box button {
+        top: 10px;  /* Justera knappen till toppen av joy-boxen */
+        left: 320px;  /* Justera knappen till höger om joy-boxen */
+        }
+
+        .energy-box button {
+        top: 10px;  /* Justera knappen till toppen av energy-boxen */
+        left: 320px;  /* Justera knappen till höger om energy-boxen */
+        }
+        .fill {
+        max-width: 100%;
+        width: 0;
+        height: 100%;
+        background-color: green;
+        transition: width 0.3s;
+        }
+        
+    .sad-text {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3rem;
+        color: red;
+        margin-left: 500px;
+        }
+        
+    .middle-text {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3rem;
+        color: rgb(255, 153, 0);
+        margin-left: 500px;
+        }
+        
+    .happy-text {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3rem;
+        color: rgb(139, 184, 71);
+        margin-left: 500px;
+        }
